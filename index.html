@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballistics</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <script src="/js/index.js"></script>
+    <div class="content">
+        <div class="data-input">
+            <h1>баллистика</h1>
+            <div class="container">
+                <div>
+                    <h4 class="title">Характеристики снаряда</h4>
+                    <form>
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input id="speed" type="number" required onkeypress="return isNumberKey(event)">
+                              <span class="omrs-input-label" style="font-size: 10px">Модуль нач. скорости снаряда (м/с)</span>
+                            </label>
+                        </div>
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input id="angle" type="number" required onkeypress="return isNumberKey(event);" onkeyup="recalculate();">
+                              <span class="omrs-input-label" style="font-size: 10px">Угол между вектором скорости и горизонтом (в град.)</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container2">
+                <table>
+                    <tr>
+                        <h5>
+                            Время полёта
+                        </h5>
+                        <h5 id="time">
+                            0.00 с
+                        </h5>
+                    </tr>
+                    <tr>
+                        <h5>
+                            Максимальная высота полёта
+                        </h5>
+                        <h5 id="height">
+                            0.00 м
+                        </h5>
+                    </tr>
+                    <tr>
+                        <h5>
+                            Дальность полёта
+                        </h5>
+                        <h5 id="length">
+                            0.00 м
+                        </h5>
+                    </tr>
+            <!-- <span class="row">
+                <h5 class="title">Время полёта</h5>
+                <h5 id="time">0.00 с</h5>
+            </span>
+            <span class="row">
+                <h5 class="title">Максимальная высота полёта</h5>
+                <h5 id="time">0.00 м</h5>
+            </span> -->
+        </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
